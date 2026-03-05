@@ -41,6 +41,10 @@ struct DataBlock
   static constexpr uint16_t s_max_value = (1u << s_bits_per_value) - 1; // 16383
 
   static_assert(s_row_size_bytes == 112, "Row size must be 112 bytes");
+  // The last 14-bit field in a row ends at bit (s_num_cols-1)*s_bits_per_value + s_bits_per_value - 1
+  // = 63*14 + 13 = 895, which is in byte 895/8 = 111 -- exactly the last byte of s_row_size_bytes.
+  static_assert((s_num_cols * s_bits_per_value) == (s_row_size_bytes * 8),
+                "Row bytes must exactly hold all column bits with no spare bits");
 
   /// Raw packed data: 64 rows x 112 bytes each
   uint8_t data[s_num_rows][s_row_size_bytes]{};
