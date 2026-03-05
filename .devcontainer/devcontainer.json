@@ -1,8 +1,6 @@
 {
-  "name": "DUNE Online to Image - Ubuntu ARM64",
+  "name": "DUNE Online to Image - Ubuntu",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
-  
-  "runArgs": ["--platform=linux/arm64"],
 
   "hostRequirements": {
     "cpus": 4,
@@ -33,7 +31,7 @@
     }
   },
 
-  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y build-essential cmake gdb",
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y build-essential cmake gdb gcc-aarch64-linux-gnu g++-aarch64-linux-gnu libc6-dev-arm64-cross binutils-aarch64-linux-gnu",
 
   "remoteUser": "vscode"
 }
