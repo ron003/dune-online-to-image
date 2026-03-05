@@ -2,11 +2,12 @@
   "name": "DUNE Online to Image - Ubuntu ARM64",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
   
+  "runArgs": ["--platform=linux/arm64"],
+
   "hostRequirements": {
     "cpus": 4,
     "memory": "8gb",
-    "storage": "32gb",
-    "architecture": "arm64"
+    "storage": "32gb"
   },
 
   "features": {
