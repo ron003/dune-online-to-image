@@ -20,7 +20,7 @@ sudo apt-get update && sudo apt-get install -y \
 REPOS=(
   # "https://github.com/owner/repo-a.git||external/repo-a"
   # "https://github.com/owner/repo-b.git|develop|external/repo-b"
-  "git@github.com:DUNE-DAQ/detdataformats.git|fddaq-v5.4.3|external/fddetdataformats"
+  "git@github.com:DUNE-DAQ/detdataformats.git|fddaq-v5.4.3|external/detdataformats"
   "git@github.com:DUNE-DAQ/fddetdataformats.git|fddaq-v5.4.3|external/fddetdataformats"
 )
 
