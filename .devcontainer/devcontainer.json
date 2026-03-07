@@ -31,7 +31,7 @@
     }
   },
 
-  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y build-essential cmake gdb gcc-aarch64-linux-gnu g++-aarch64-linux-gnu libc6-dev-arm64-cross binutils-aarch64-linux-gnu",
+  "postCreateCommand": "bash .devcontainer/bootstrap-repos.sh",
 
   "remoteUser": "vscode"
 }
