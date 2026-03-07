@@ -11,6 +11,12 @@ sudo apt-get update && sudo apt-get install -y \
   libc6-dev-arm64-cross \
   binutils-aarch64-linux-gnu
 
+mkdir $HOME/.ssh
+cat <<EOF >$HOME/.ssh/config
+StrictHostKeyChecking no
+UserKnownHostsFile=/dev/null
+EOF
+
 # Clone or update additional repositories needed by this codespace.
 # Add entries to REPOS using the format:
 #   "<https-or-ssh-url>|<optional-branch>|<optional-destination>"
