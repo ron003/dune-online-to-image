@@ -26,8 +26,8 @@ EOF
 REPOS=(
   # "https://github.com/owner/repo-a.git||external/repo-a"
   # "https://github.com/owner/repo-b.git|develop|external/repo-b"
-  "https://github.com:DUNE-DAQ/detdataformats.git|fddaq-v5.4.3|external/detdataformats"
-  "https://github.com:DUNE-DAQ/fddetdataformats.git|fddaq-v5.4.3|external/fddetdataformats"
+  "https://github.com/DUNE-DAQ/detdataformats.git|fddaq-v5.4.3|external/detdataformats"
+  "https://github.com/DUNE-DAQ/fddetdataformats.git|fddaq-v5.4.3|external/fddetdataformats"
 )
 
 if [[ ${#REPOS[@]} -eq 0 ]]; then
